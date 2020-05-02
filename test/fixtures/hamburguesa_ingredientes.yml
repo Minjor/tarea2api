@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hid: 1
+  iid: 1
+
+two:
+  hid: 1
+  iid: 1

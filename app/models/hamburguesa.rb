@@ -1,0 +1,2 @@
+class Hamburguesa < ApplicationRecord
+end

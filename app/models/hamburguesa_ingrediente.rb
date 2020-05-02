@@ -1,0 +1,2 @@
+class HamburguesaIngrediente < ApplicationRecord
+end
