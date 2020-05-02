@@ -19,6 +19,10 @@ class HamburguesasController < ApplicationController
 
   # POST /hamburguesa
   def create # chequear input invalido
+    if params[:nombre] == nil || params[:descripcion] == nil || params[:precio] == nil || params[:imagen] == nil
+      render :status => 400, json: {message: "Input invalido"}
+      return
+    end
     @hamburguesa = Hamburguesa.new(hamburguesa_params)
     if @hamburguesa.save
       render json: @hamburguesa, status: :created, location: @hamburguesa
@@ -29,8 +33,8 @@ class HamburguesasController < ApplicationController
 
   # PATCH /hamburguesa/1
   def update
-    if params[:nombre] == nil || params[:descripcion] == nil || params[:precio] == nil || params[:imagen] == nil
-      render :status => 400, json: {message: "Input invalido"}
+    if params[:nombre] == nil && params[:descripcion] == nil && params[:precio] == nil && params[:imagen] == nil
+      render :status => 400, json: {message: "Parametros invalidos"}
       return
     end
     if @hamburguesa.update(hamburguesa_params)
