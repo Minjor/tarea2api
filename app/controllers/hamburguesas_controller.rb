@@ -51,6 +51,7 @@ class HamburguesasController < ApplicationController
       return
     end
     @hamburguesa.destroy
+    render :status => 200, json: {message: "Hamburguesa eliminada"}
   end
 
   private
