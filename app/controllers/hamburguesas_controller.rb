@@ -33,8 +33,12 @@ class HamburguesasController < ApplicationController
 
   # PATCH /hamburguesa/1
   def update
-    if params[:nombre] == nil && params[:descripcion] == nil && params[:precio] == nil && params[:imagen] == nil
+    if params[:nombre] == nil || params[:descripcion] == nil || params[:precio] == nil || params[:imagen] == nil
       render :status => 400, json: {message: "Parametros invalidos"}
+      return
+    end
+    if @hamburguesa == nil
+      render :status => 404, json: {message: "Hamburguesa inexistente"}
       return
     end
     if @hamburguesa.update(hamburguesa_params)

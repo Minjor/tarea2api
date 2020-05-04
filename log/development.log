@@ -12305,3 +12305,495 @@ Processing by HamburguesasController#destroy as */*
 Completed 200 OK in 24ms (Views: 0.2ms | ActiveRecord: 6.9ms)
 
 
+Started PATCH "/hamburguesa/1" for ::1 at 2020-05-03 23:32:35 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"De la casa", "p"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"1", "hamburguesa"=>{"nombre"=>"De la casa", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.3ms)[0m  [1m[34mSELECT  "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:64
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 3.5ms)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/hamburguesas_controller.rb:40:in `update'
+Started PATCH "/hamburguesa/1" for ::1 at 2020-05-03 23:32:57 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"1", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.2ms)[0m  [1m[34mSELECT  "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:64
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/hamburguesas_controller.rb:40:in `update'
+Started POST "/hamburguesa" for ::1 at 2020-05-03 23:33:59 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/minjor/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"Doble Cuarto de Libra", "precio"=>4990, "descion"=>"Exquisita doble hamburguesa con queso, pepinillos, mayonesa y ketchup", "imagen"=>"https://cdn.mcdonalds.es/sites/default/files/produits/cuarto-de-libra-con-queso_1_0.png", "hamburguesa"=>{"nombre"=>"Doble Cuarto de Libra", "precio"=>4990, "imagen"=>"https://cdn.mcdonalds.es/sites/default/files/produits/cuarto-de-libra-con-queso_1_0.png"}}
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mHamburguesa Create (0.5ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "De la casa"], ["precio", 5990], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mIngrediente Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredientes" ("nombre", "descripcion") VALUES ($1, $2) RETURNING "id"[0m  [["nombre", "Queso Cheddar"], ["descripcion", "Cheddar de la mejor calidad"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+Started PATCH "/hamburguesa/1" for ::1 at 2020-05-03 23:34:24 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"1", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.4ms)[0m  [1m[34mSELECT  "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:64
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/hamburguesas_controller.rb:40:in `update'
+Started PATCH "/hamburguesa/1" for ::1 at 2020-05-03 23:34:26 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"1", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.3ms)[0m  [1m[34mSELECT  "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:64
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/hamburguesas_controller.rb:40:in `update'
+Started PATCH "/hamburguesa" for ::1 at 2020-05-03 23:34:42 -0400
+  
+ActionController::RoutingError (No route matches [PATCH] "/hamburguesa"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/hamburguesa" for 127.0.0.1 at 2020-05-03 23:35:33 -0400
+Processing by HamburguesasController#index as HTML
+  [1m[36mHamburguesa Load (1.3ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+  ↳ app/controllers/hamburguesas_controller.rb:8
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 3.3ms)
+
+
+Started PATCH "/hamburguesa/3" for ::1 at 2020-05-03 23:35:59 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"3", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.3ms)[0m  [1m[34mSELECT  "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:64
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/hamburguesas_controller.rb:40:in `update'
+Started PATCH "/hamburguesa/3" for ::1 at 2020-05-03 23:35:59 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"3", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (1.1ms)[0m  [1m[34mSELECT  "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:64
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/hamburguesas_controller.rb:40:in `update'
+Started PATCH "/hamburguesa/3" for ::1 at 2020-05-03 23:36:23 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"3", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.3ms)[0m  [1m[34mSELECT  "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:60
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 3.0ms)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/hamburguesas_controller.rb:36:in `update'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (108.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tarea2api_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (107.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tarea2api_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (400.0ms)[0m  [1m[35mCREATE DATABASE "tarea2api_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (397.7ms)[0m  [1m[35mCREATE DATABASE "tarea2api_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "hamburguesa_ingredientes" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "hamburguesa_ingredientes" ("id" bigserial primary key, "hamburguesa_id" integer, "ingrediente_id" integer)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "hamburguesas" CASCADE[0m
+  ↳ db/schema.rb:23
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "hamburguesas" ("id" bigserial primary key, "nombre" character varying, "precio" integer, "descripcion" character varying, "imagen" character varying, "ingredientes" jsonb DEFAULT '[]')[0m
+  ↳ db/schema.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "ingredientes" CASCADE[0m
+  ↳ db/schema.rb:31
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "ingredientes" ("id" bigserial primary key, "nombre" character varying, "descripcion" character varying)[0m
+  ↳ db/schema.rb:31
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200502172742)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200501185745),
+(20200430000403),
+(20200501184061);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-04 03:37:10.161612"], ["updated_at", "2020-05-04 03:37:10.161612"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "hamburguesa_ingredientes" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "hamburguesa_ingredientes" ("id" bigserial primary key, "hamburguesa_id" integer, "ingrediente_id" integer)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "hamburguesas" CASCADE[0m
+  ↳ db/schema.rb:23
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "hamburguesas" ("id" bigserial primary key, "nombre" character varying, "precio" integer, "descripcion" character varying, "imagen" character varying, "ingredientes" jsonb DEFAULT '[]')[0m
+  ↳ db/schema.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "ingredientes" CASCADE[0m
+  ↳ db/schema.rb:31
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "ingredientes" ("id" bigserial primary key, "nombre" character varying, "descripcion" character varying)[0m
+  ↳ db/schema.rb:31
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200502172742)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200501185745),
+(20200430000403),
+(20200501184061);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-04 03:37:10.239700"], ["updated_at", "2020-05-04 03:37:10.239700"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-05-04 03:37:10.243453"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mHamburguesa Create (0.5ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "De la casa"], ["precio", 5990], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mIngrediente Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredientes" ("nombre", "descripcion") VALUES ($1, $2) RETURNING "id"[0m  [["nombre", "Queso Cheddar"], ["descripcion", "Cheddar de la mejor calidad"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+Started PATCH "/hamburguesa/1" for ::1 at 2020-05-03 23:37:26 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/minjor/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"1", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.4ms)[0m  [1m[34mSELECT  "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:60
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:36
+  [1m[36mHamburguesa Update (0.3ms)[0m  [1m[33mUPDATE "hamburguesas" SET "precio" = $1 WHERE "hamburguesas"."id" = $2[0m  [["precio", 6990], ["id", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:36
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:36
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 6.4ms)
+
+
+Started PATCH "/hamburguesa/1" for ::1 at 2020-05-03 23:38:49 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"De la casa", "pre"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"1", "hamburguesa"=>{"nombre"=>"De la casa", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.9ms)[0m  [1m[34mSELECT  "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:60
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:36
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/hamburguesa/1" for ::1 at 2020-05-03 23:38:56 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"De la casa", "pre"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"1", "hamburguesa"=>{"nombre"=>"De la casa", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.3ms)[0m  [1m[34mSELECT  "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:64
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:40
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:40
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 5.3ms)
+
+
+Started PATCH "/hamburguesa/1" for ::1 at 2020-05-03 23:39:13 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"De la casa", "pre"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"1", "hamburguesa"=>{"nombre"=>"De la casa", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.3ms)[0m  [1m[34mSELECT  "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:64
+Completed 400 Bad Request in 14ms (Views: 0.2ms | ActiveRecord: 7.7ms)
+
+
+Started PATCH "/hamburguesa/11" for ::1 at 2020-05-03 23:42:07 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"De la casa", "pre"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"11", "hamburguesa"=>{"nombre"=>"De la casa", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.4ms)[0m  [1m[34mSELECT  "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:68
+Completed 400 Bad Request in 2ms (Views: 0.2ms | ActiveRecord: 2.4ms)
+
+
+Started PATCH "/hamburguesa/11" for ::1 at 2020-05-03 23:42:14 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"11", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.5ms)[0m  [1m[34mSELECT  "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:68
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/hamburguesa" for ::1 at 2020-05-03 23:42:49 -0400
+Processing by HamburguesasController#index as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+  ↳ app/controllers/hamburguesas_controller.rb:8
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/hamburguesa/1" for ::1 at 2020-05-03 23:42:53 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"1", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.2ms)[0m  [1m[34mSELECT  "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:68
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/hamburguesa/11" for ::1 at 2020-05-03 23:42:55 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"11", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.2ms)[0m  [1m[34mSELECT  "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:68
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/hamburguesa/a" for ::1 at 2020-05-03 23:43:14 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"a", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+Filter chain halted as :set_hamburguesa rendered or redirected
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hamburguesa" for ::1 at 2020-05-03 23:43:30 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"Doble Cuarto de Libra", "precio"=>4990, "descion"=>"Exquisita doble hamburguesa con queso, pepinillos, mayonesa y ketchup", "imagen"=>"https://cdn.mcdonalds.es/sites/default/files/produits/cuarto-de-libra-con-queso_1_0.png", "hamburguesa"=>{"nombre"=>"Doble Cuarto de Libra", "precio"=>4990, "imagen"=>"https://cdn.mcdonalds.es/sites/default/files/produits/cuarto-de-libra-con-queso_1_0.png"}}
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hamburguesa" for ::1 at 2020-05-03 23:44:17 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"Doble Cuarto de Libra", "precio"=>4990, "descripcion"=>"Exquisita doble hamburguesa con queso, pepinillos, mayonesa y ketchup", "imagen"=>"https://cdn.mcdonalds.es/sites/default/files/produits/cuarto-de-libra-con-queso_1_0.png", "hamburguesa"=>{"nombre"=>"Doble Cuarto de Libra", "precio"=>4990, "descripcion"=>"Exquisita doble hamburguesa con queso, pepinillos, mayonesa y ketchup", "imagen"=>"https://cdn.mcdonalds.es/sites/default/files/produits/cuarto-de-libra-con-queso_1_0.png"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:27
+  [1m[36mHamburguesa Create (0.4ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "Doble Cuarto de Libra"], ["precio", 4990], ["descripcion", "Exquisita doble hamburguesa con queso, pepinillos, mayonesa y ketchup"], ["imagen", "https://cdn.mcdonalds.es/sites/default/files/produits/cuarto-de-libra-con-queso_1_0.png"]]
+  ↳ app/controllers/hamburguesas_controller.rb:27
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:27
+Completed 201 Created in 6ms (Views: 0.7ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/ingrediente" for ::1 at 2020-05-03 23:46:26 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"nombre"=>"Pepinillos", "descripcion"=>"Frescos, directamente de la granja", "ingrediente"=>{"nombre"=>"Pepinillos", "descripcion"=>"Frescos, directamente de la granja"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:23
+  [1m[36mIngrediente Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredientes" ("nombre", "descripcion") VALUES ($1, $2) RETURNING "id"[0m  [["nombre", "Pepinillos"], ["descripcion", "Frescos, directamente de la granja"]]
+  ↳ app/controllers/ingredientes_controller.rb:23
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:23
+Completed 201 Created in 14ms (Views: 1.5ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/ingrediente" for ::1 at 2020-05-03 23:46:30 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"noe"=>"Pepinillos", "descripcion"=>"Frescos, directamente de la granja", "ingrediente"=>{"descripcion"=>"Frescos, directamente de la granja"}}
+Completed 400 Bad Request in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ingrediente" for ::1 at 2020-05-03 23:46:50 -0400
+Processing by IngredientesController#index as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "ingrediente"=>{"nombre"=>"De la casa", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"}}
+  [1m[36mIngrediente Load (0.5ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes"[0m
+  ↳ app/controllers/ingredientes_controller.rb:8
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ingrediente/1" for ::1 at 2020-05-03 23:46:53 -0400
+Processing by IngredientesController#show as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"1", "ingrediente"=>{"nombre"=>"De la casa", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"}}
+  [1m[36mIngrediente Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:54
+  [1m[36mIngrediente Load (0.2ms)[0m  [1m[34mSELECT  "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:55
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ingrediente/11" for ::1 at 2020-05-03 23:46:58 -0400
+Processing by IngredientesController#show as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"11", "ingrediente"=>{"nombre"=>"De la casa", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"}}
+  [1m[36mIngrediente Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:54
+Filter chain halted as :set_ingrediente rendered or redirected
+Completed 404 Not Found in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ingrediente/k" for ::1 at 2020-05-03 23:47:16 -0400
+Processing by IngredientesController#show as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>6990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"k", "ingrediente"=>{"nombre"=>"De la casa", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"}}
+Filter chain halted as :set_ingrediente rendered or redirected
+Completed 400 Bad Request in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/ingrediente/2" for ::1 at 2020-05-03 23:47:36 -0400
+Processing by IngredientesController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mIngrediente Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:54
+  [1m[36mIngrediente Load (3.9ms)[0m  [1m[34mSELECT  "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:55
+  [1m[36mHamburguesaIngrediente Load (0.4ms)[0m  [1m[34mSELECT "hamburguesa_ingredientes".* FROM "hamburguesa_ingredientes" WHERE "hamburguesa_ingredientes"."ingrediente_id" = $1[0m  [["ingrediente_id", 2]]
+  ↳ app/controllers/ingredientes_controller.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:43
+  [1m[36mIngrediente Destroy (0.2ms)[0m  [1m[31mDELETE FROM "ingredientes" WHERE "ingredientes"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/ingredientes_controller.rb:43
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:43
+Completed 200 OK in 22ms (Views: 0.1ms | ActiveRecord: 9.6ms)
+
+
+Started DELETE "/ingrediente/22" for ::1 at 2020-05-03 23:48:15 -0400
+Processing by IngredientesController#destroy as */*
+  Parameters: {"id"=>"22"}
+  [1m[36mIngrediente Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:54
+Filter chain halted as :set_ingrediente rendered or redirected
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/hamburguesa/1/ingrediente/1" for ::1 at 2020-05-03 23:48:54 -0400
+Processing by HamburguesaIngredientesController#addingredient as */*
+  Parameters: {"hid"=>"1", "iid"=>"1"}
+  [1m[36mHamburguesa Exists (497.8ms)[0m  [1m[34mSELECT  1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesa_ingredientes_controller.rb:38
+  [1m[36mHamburguesa Load (2.5ms)[0m  [1m[34mSELECT  "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesa_ingredientes_controller.rb:39
+  [1m[36mIngrediente Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesa_ingredientes_controller.rb:45
+  [1m[36mIngrediente Load (0.3ms)[0m  [1m[34mSELECT  "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesa_ingredientes_controller.rb:46
+  [1m[36mHamburguesaIngrediente Load (0.2ms)[0m  [1m[34mSELECT "hamburguesa_ingredientes".* FROM "hamburguesa_ingredientes" WHERE "hamburguesa_ingredientes"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 1]]
+  ↳ app/controllers/hamburguesa_ingredientes_controller.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesa_ingredientes_controller.rb:65
+  [1m[36mHamburguesaIngrediente Create (0.4ms)[0m  [1m[32mINSERT INTO "hamburguesa_ingredientes" ("hamburguesa_id", "ingrediente_id") VALUES ($1, $2) RETURNING "id"[0m  [["hamburguesa_id", 1], ["ingrediente_id", 1]]
+  ↳ app/controllers/hamburguesa_ingredientes_controller.rb:65
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesa_ingredientes_controller.rb:65
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesa_ingredientes_controller.rb:70
+  [1m[36mHamburguesa Update (0.6ms)[0m  [1m[33mUPDATE "hamburguesas" SET "ingredientes" = $1 WHERE "hamburguesas"."id" = $2[0m  [["ingredientes", "[{\"path\":\"https://tarea2api.herokuapp.com/ingrediente/1\"}]"], ["id", 1]]
+  ↳ app/controllers/hamburguesa_ingredientes_controller.rb:70
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesa_ingredientes_controller.rb:70
+Completed 201 Created in 522ms (Views: 0.2ms | ActiveRecord: 509.3ms)
+
+
+Started DELETE "/ingrediente/1" for ::1 at 2020-05-03 23:49:15 -0400
+Processing by IngredientesController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mIngrediente Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:54
+  [1m[36mIngrediente Load (0.3ms)[0m  [1m[34mSELECT  "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:55
+  [1m[36mHamburguesaIngrediente Load (0.3ms)[0m  [1m[34mSELECT "hamburguesa_ingredientes".* FROM "hamburguesa_ingredientes" WHERE "hamburguesa_ingredientes"."ingrediente_id" = $1[0m  [["ingrediente_id", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:39
+Completed 409 Conflict in 6ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
